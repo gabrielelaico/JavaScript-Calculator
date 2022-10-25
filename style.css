@@ -1,0 +1,115 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    font-family: Gotham Rounded, sans-serif;
+    font-weight: normal;
+}
+
+.calculator-grid {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    min-height: 100vh;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: minmax(120px, auto) repeat(5, 100px);
+}
+
+button {
+    margin: 1px;
+    border-radius: 5%;
+    font-size: 30px;
+    font-family: optima;
+    cursor: pointer
+}
+
+.operand {
+    background-color: rgb(10, 170, 151);
+    border: 3px solid rgb(10, 170, 151);
+    border-radius: 10px;
+}
+
+.operand:active {
+    background-color: rgb(127, 229, 217);
+    border: 3px solid rgb(127, 229, 217);
+}
+
+.operator {
+    background-color: rgb(241, 140, 7);
+    border: 3px solid rgb(241, 140, 7);
+    border-radius: 10px;
+}
+
+.operator.operator:active {
+    background-color: rgb(238, 187, 120);
+    border: 3px solid rgb(238, 187, 120);
+}
+
+.all-clean {
+    background-color: rgb(5, 125, 162);
+    border: 3px solid rgb(5, 125, 162);
+    border-radius: 10px;
+}
+
+.all-clean.all-clean:active {
+    background-color: rgb(91, 186, 215);
+    border: 3px solid rgb(91, 186, 215);
+}
+
+.delete {
+    background-color: rgb(5, 125, 162);
+    border: 3px solid rgb(5, 125, 162);
+    border-radius: 10px;
+}
+
+.delete.delete:active {
+    background-color: rgb(91, 186, 215);
+    border: 3px solid rgb(91, 186, 215);
+}
+
+.percent {
+    background-color: rgb(5, 125, 162);
+    border: 3px solid rgb(5, 125, 162);
+    border-radius: 10px;
+}
+
+.percent:active {
+    background-color: rgb(91, 186, 215);
+    border: 3px solid rgb(91, 186, 215);
+}
+
+.equal {
+    background-color: rgb(241, 140, 7);
+    border: 3px solid rgb(241, 140, 7);
+    border-radius: 10px;
+    grid-column: span 2;
+}
+
+.equal.equal:active {
+    background-color: rgb(238, 187, 120);
+    border: 3px solid rgb(238, 187, 120);
+}
+
+.output {
+    border: 1px solid rgba(0, 0, 0, .75);
+    border-radius: 10px;
+    grid-column: 1 / -1;
+    background-color: rgba(0, 0, 0, .75);
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    flex-direction: column;
+    padding: 10px;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+.output .previous-operand {
+    color: rgba(255, 255, 255, .75);
+    font-size: 1.5rem;
+}
+
+.output .current-operand {
+    color: white;
+    font-size: 2.5rem;
+}
