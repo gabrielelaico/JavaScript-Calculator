@@ -48,9 +48,11 @@ class Calculator {
             case '÷':
                 calculation = previous / current
                 break
-            default:
-                return
+            case '%':
+                calculation = previous % current
+                break
         }
+
         this.currentOperand = calculation
         this.operation = undefined
         this.previousOperand = ''
@@ -72,6 +74,7 @@ class Calculator {
             return integerDisplay
         }
     }
+
 
     updateDisplay() {
         this.currentOperandTextElement.innerText =

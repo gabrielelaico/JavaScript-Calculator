@@ -49,6 +49,7 @@ button {
     background-color: rgb(5, 125, 162);
     border: 3px solid rgb(5, 125, 162);
     border-radius: 10px;
+    grid-column: span 2;
 }
 
 .all-clean.all-clean:active {
